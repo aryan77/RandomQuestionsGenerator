@@ -81,8 +81,11 @@ except IOError:
     print('\nI could not create the file exam_questions.txt, sorry')
 
 #Write the remaining unanswered questions to log.txt file
-f=open("remaining_qs_donotdelete.log.txt", "w")
-w = csv.writer(f)
-for key, value in sorted(chapters_questions.items()):
-    w.writerow([key, value])
-f.close()
+try:
+    f=open("remaining_qs_donotdelete.log.txt", "w")
+    w = csv.writer(f)
+    for key, value in sorted(chapters_questions.items()):
+        w.writerow([key, value])
+    f.close()
+ except IOError:
+    print('\nI could not create the file remaining_qs_donotdelete.log.txt, sorry')
