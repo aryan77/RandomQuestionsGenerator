@@ -7,8 +7,8 @@ questions_per_exercise = \
 [13, 18, 22, 19, 22, 7, 13, 14, 10, 19, 19, 18, 11, 14, 6, 15, 11, 6, 19, 16,\
  10, 5, 10, 8, 12, 4, 11, 15, 9, 15, 18, 10, 5, 11, 7, 6, 7, 5, 4, 15]
 
-#Select 25 different chapters and corresponding questions  
-number_of_questions_per_exam = 25
+#Select 21 different chapters and corresponding questions  
+number_of_questions_per_exam = 21
  
 #See if the log file exists if so load all the data from it
 chapters_questions = {}
