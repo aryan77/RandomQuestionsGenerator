@@ -4,8 +4,8 @@ import json
 #The array below must be edited manually so that element number i contains the 
 #number of questions at the end of the (i+1)th chapter in the David Alcorn Tony Banks book
 questions_per_exercise = \
-[10, 12, 13, 9, 10, 12, 17, 19, 20, 9, 10, 12, 13, 9, 10, 12, 17, 19, 20, 9,\
- 10, 12, 13, 9, 10, 12, 17, 19, 20, 9, 10, 12, 13, 9, 10, 12, 17, 19, 20, 9]
+[13, 18, 22, 19, 22, 7, 13, 14, 10, 19, 19, 18, 11, 14, 6, 15, 11, 6, 19, 16,\
+ 10, 5, 10, 8, 12, 4, 11, 15, 9, 15, 18, 10, 5, 11, 7, 6, 7, 5, 4, 15]
 
 #Select 25 different chapters and corresponding questions  
 number_of_questions_per_exam = 25
