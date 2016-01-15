@@ -8,6 +8,9 @@ questions_per_exercise = \
 [10, 12, 13, 9, 10, 12, 17, 19, 20, 9, 10, 12, 13, 9, 10, 12, 17, 19, 20, 9,\
  10, 12, 13, 9, 10, 12, 17, 19, 20, 9, 10, 12, 13, 9, 10, 12, 17, 19, 20, 9]
  
+#The code will ignore setting questions in the following chapters please ammend as required
+ignore_chapters = [1, 2, 3, 4]  
+ 
 #See if the log file exists if so load all the data from it
 chapters_questions = {}
 first_run = 1
@@ -50,7 +53,7 @@ else:
 #Forming a list of all the chapters that still contain unanswered questions
 incomplete_chapters = []
 for chapter in chapters_questions:
-        if len(chapters_questions[chapter]) > 0:
+        if (int(chapter[-2:]) not in ignore_chapters) and len(chapters_questions[chapter]) > 0:
             incomplete_chapters.append(chapter)
             
 #Select 25 different chapters and corresponding questions 
@@ -87,5 +90,5 @@ try:
     for key, value in sorted(chapters_questions.items()):
         w.writerow([key, value])
     f.close()
- except IOError:
+except IOError:
     print('\nI could not create the file remaining_qs_donotdelete.log.txt, sorry')
