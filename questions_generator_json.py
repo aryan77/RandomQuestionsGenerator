@@ -6,6 +6,9 @@ import json
 questions_per_exercise = \
 [13, 18, 22, 19, 22, 7, 13, 14, 10, 19, 19, 18, 11, 14, 6, 15, 11, 6, 19, 16,\
  10, 5, 10, 8, 12, 4, 11, 15, 9, 15, 18, 10, 5, 11, 7, 6, 7, 5, 4, 15]
+ 
+#The code will ignore setting questions in the following chapters please ammend as required
+ignore_chapters = [1, 2, 3, 4] 
 
 #Select 21 different chapters and corresponding questions  
 number_of_questions_per_exam = 21
@@ -52,7 +55,7 @@ exams_completed = int((sum(questions_per_exercise)-i)/number_of_questions_per_ex
 #Forming a list of all the chapters that still contain unanswered questions
 incomplete_chapters = []
 for chapter in chapters_questions:
-        if len(chapters_questions[chapter]) > 0:
+        if (int(chapter[-2:]) not in ignore_chapters) and len(chapters_questions[chapter]) > 0:
             incomplete_chapters.append(chapter)
             
 
